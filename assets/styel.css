@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+} 
+
+header {
+    text-align: center;
+    color: white;
+    background-color: rgb(10, 98, 170);
+    padding: 10px;
+}
+
+#cloud {
+    width: 60px;
+}
+
+
+
+.forcast {
+    text-align: center;
+}
+
+#history {
+    margin-top: 3px;
+   border-top-style: solid; 
+   border-color: black;
+}
