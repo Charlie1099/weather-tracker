@@ -15,7 +15,7 @@ var serchCity = function (event) {
         getCurrentWeather(cityName);
 
         //clear old content
-        weatherContanerEl.textContent = "";
+        // weatherContanerEl.textContent = "";
         userFormEl.value = "";
     } else {
         alert("Please Enter a City name")
@@ -25,9 +25,9 @@ var serchCity = function (event) {
 
  // show current weather 
 var getCurrentWeather = function() {
-    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a0f1ca61bbf24d8e8dfe226c2cf4089a`
+    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=denver&appid=a0f1ca61bbf24d8e8dfe226c2cf4089a"
 
-    apiUrl.valueOf("cityname")
+    apiUrl.replace("denver", "#serch-box")
     console.log("getCurrentWeather")
     console.log(apiUrl.valueOf("cityname"))
 
