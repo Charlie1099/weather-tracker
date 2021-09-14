@@ -10,6 +10,7 @@ var serchCity = function (event) {
 
     //get value from the input
     var cityName = userFormEl.value.trim();
+    
 
     if (cityName) {
         getCurrentWeather(cityName);
@@ -23,19 +24,20 @@ var serchCity = function (event) {
 };
 
 
- // show current weather 
-var getCurrentWeather = function() {
+// show current weather 
+getCurrentWeather = function () {
     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=denver&appid=a0f1ca61bbf24d8e8dfe226c2cf4089a"
 
-    apiUrl.replace("denver", "#serch-box")
+    apiUrl.valueOf("denver")
     console.log("getCurrentWeather")
-    console.log(apiUrl.valueOf("cityname"))
+    console.log(apiUrl.valueOf("denver"))
 
-    
-    fetch(apiUrl).then(function(response) {
+
+    fetch(apiUrl).then(function (response) {
         if (response.ok) {
-            response.json().then(function(data) {
-              console.log(data)  
+            response.json().then(function (data) {
+                console.log(data)
+
             });
         } else {
             alert("error: " + response.statusText);
@@ -43,7 +45,11 @@ var getCurrentWeather = function() {
     });
 };
 
-var displayWeather = function(city, searchTerm) {
+button.addEventListener("click", getCurrentWeather)
+   
+
+
+var displayWeather = function (city, searchTerm) {
     //check if it is a city
     if (city === 0) {
         weatherContanerEl.textContent = "No City Found."
@@ -51,25 +57,26 @@ var displayWeather = function(city, searchTerm) {
     }
 
     userFormEl.textContent = searchTerm;
-    
-    //ceate a elemint to display current weather
-    var titleEl = document.createElement("span")
-    titleEl.textContent = city;
 
-     cityEl.appendChild(titleEl);
+    //ceate a elemint to display current weather
+    var titleEl = document.createElement("div")
+    titleEl.textContent = city;
+    displayWeather.innerhtml = titleEl
+    
+    titleEl.appendChild(titleEl);
     titleEl.classList = "flex-row"
 
 }
 
- 
 
 
 
- // make for loop to display the 5 day for cast
+
+// make for loop to display the 5 day for cast
 
 
-button.addEventListener("click", serchCity)
-    
+
+
 
 
  // function
