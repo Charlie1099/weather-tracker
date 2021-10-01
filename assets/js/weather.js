@@ -26,11 +26,11 @@ var serchCity = function (event) {
 
 // show current weather 
 getCurrentWeather = function () {
-    var apiUrl = "https://api.openweathermap.org/data/2.5/weather?q=denver&appid=a0f1ca61bbf24d8e8dfe226c2cf4089a"
-
-    apiUrl.valueOf("denver")
+    let inputNode = document.querySelector("#serch-box")
+    var city = inputNode.value
+    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=a0f1ca61bbf24d8e8dfe226c2cf4089a`
     console.log("getCurrentWeather")
-    console.log(apiUrl.valueOf("denver"))
+    
 
 
     fetch(apiUrl).then(function (response) {
@@ -45,11 +45,12 @@ getCurrentWeather = function () {
     });
 };
 
+
 button.addEventListener("click", getCurrentWeather)
    
 
 
-var displayWeather = function (city, searchTerm) {
+var displayWeather = function (getCurrentWeather) {
     //check if it is a city
     if (city === 0) {
         weatherContanerEl.textContent = "No City Found."
@@ -59,12 +60,10 @@ var displayWeather = function (city, searchTerm) {
     userFormEl.textContent = searchTerm;
 
     //ceate a elemint to display current weather
-    var titleEl = document.createElement("div")
-    titleEl.textContent = city;
-    displayWeather.innerhtml = titleEl
     
-    titleEl.appendChild(titleEl);
-    titleEl.classList = "flex-row"
+    var titleEl = document.createElement("div")
+    document.body.appendChild(titleEl)
+    
 
 }
 
