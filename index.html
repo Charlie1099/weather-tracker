@@ -5,59 +5,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="api.openweathermap.org/data/2.5/weather?q=houston&appid=a0f1ca61bbf24d8e8dfe226c2cf4089a">
-
+    <!-- <link href="api.openweathermap.org/data/2.5/weather?q=houston&appid=0758f128e70d21dd5ec8afc958ec4ab0"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="./assets/styel.css">
-    <title>Document</title>
+    <title>Weather Tracker</title>
 </head>
 
 <body class="flex-colum min-100-vh">
-    
+
     <header class="hero">
-         <img src="./assets/images/rainy.png" alt="a picture of a cloud raining" id="cloud"> 
+        <img src="./assets/images/rainy.png" alt="a picture of a cloud raining" id="cloud">
         <h1>Weather Scaner</h1>
     </header>
 
-    <main class="flex-row justify-space-between">
-        <div class="col-12 col-md-4" id="serch-colum">
-            <div class="card" id="serch-results">
-                <h2>Search weather in a city</h2>
-                <form id="wether" class="card-body">
-                    <label for="search" class="form-label"></label>
-                    <input id="serch-box" type="text" autofocus="true" class="form-input" placeholder="City" />
-                
-                </form>
+    <main>
+        <div class="contaner">
+            <div class="row">
+                <div class="col-12 col-md-4" id="search-colum">
+                    <div class="card" id="search-results">
+                        <h2>Search weather in a city</h2>
+                        <form id="weather" class="card-body">
+                            <label for="search" class="form-label"></label>
+                            <input id="search-box" type="text" autofocus="true" class="form-input" placeholder="City" />
+                        </form>
+                        <button id="btn-search">Search City</button>
+                    </div>
+                    <br>
+                    <!--search history-->
+                    <div>
+                        <h2>Recent Weather Searches</h2>
+                        <button class="btn btn-primary mb-3 " type="button" id="clear-history">Clear History</button>
+                        <form id="history"></form>
+                    </div>
+                </div>
 
-                 <button id="btn-search">Search City</button>
-            </div>
+                <!-- weather contaner to show current weather -->
+                <div class="col-12 col-md-8">
+                    <div class="row mr-0">
+                        <div class="col-12 border border-dark m-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span id="city-name" class="city-name align-middle"></span>
+                                    <img id="current-pic" src="placeholder" alt="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p id="temperature"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p id="humidity"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p id="wind-speed"></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 d-flex">
+                                    <p id="UV-index"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-
-            <!--serch history-->
-            <div class="col-12 col-md-8" id="history">
-                <h2>Recent Weather Searches</h2>
-                <div id="serch-history" class="list-group">
-
+                <!--5 day forecast-->
+               
+                    <div class="row" id="five-day">
+                        <div class="col forecast bg-primary text-white ml-3 mb-3"></div>
+                        <div class="col forecast bg-primary text-white ml-3 mb-3"></div>
+                        <div class="col forecast bg-primary text-white ml-3 mb-3"></div>
+                        <div class="col forecast bg-primary text-white ml-3 mb-3"></div>
+                        <div class="col forecast bg-primary text-white ml-3 mb-3"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- weather contaner to show current weather -->
-        <div class="col-12 col-md-8">
-            <div class="weather-contaner">
-
-            </div>
         </div>
-
-        <!--5 day forcast-->
-
-        <div class="card" id="five">
-            <h2 class="forcast">5 Day Forcast</h2>
-            <div class="card-header">
-
-            </div>
-        </div>
-
     </main>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="assets/js/weather.js"></script>
 </body>
 
