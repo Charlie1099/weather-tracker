@@ -1,4 +1,10 @@
 # weather-tracker
-The weather tracker site is set up to help users check the wether of a city for the purpouse of traviling to a city for vacation or even for work.
 
-this was mad using HTML, CSS, and JavaScript it also uses a api from https://openweathermap.org
+# Description 
+Weather Tracker app is a sever side api that will help you look up a city and see the current weather and next five day forcast.
+
+# Installation
+You do not need to install anything to run this app you can clone this repository to receive all the files.
+
+# Usage
+As a traveler I want to see the weather outlook for a city so that I can plan a trip accordingly

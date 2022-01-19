@@ -16,7 +16,7 @@ var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 var APIKey = "0758f128e70d21dd5ec8afc958ec4ab0"
 
 function getWeather(cityName) {
-    var queryURL = "http://api.openweathermap.org/data/2.5/weather?q="+ cityName + "&appid=" + APIKey;
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+ cityName + "&appid=" + APIKey;
     axios.get(queryURL)
     .then(function(response) {
         console.log(response);
