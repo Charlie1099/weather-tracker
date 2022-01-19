@@ -3,6 +3,9 @@
 # Description 
 Weather Tracker app is a sever side api that will help you look up a city and see the current weather and next five day forcast.
 
+# Screenshot
+<img src="assets\images\Weather-API.png">
+
 # Installation
 You do not need to install anything to run this app you can clone this repository to receive all the files.
 
