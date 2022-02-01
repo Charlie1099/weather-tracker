@@ -12,7 +12,7 @@ To run web application visit https://github.com/Charlie1099/weather-tracker
 As a traveler I want to see the weather outlook for a city so that I can plan a trip accordingly
 
 # Questions
-GitHub: https://github.com/Charlie1099
-Deployed app: https://charlie1099.github.io/weather-tracker/
+GitHub: https://github.com/Charlie1099 <br>
+Deployed app: https://charlie1099.github.io/weather-tracker/<br>
 Email: cdcharlesworth@gmail.com
 
