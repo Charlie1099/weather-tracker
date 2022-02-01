@@ -1,7 +1,7 @@
 # weather-tracker
 
 # Description 
-Weather Tracker app is a sever side api that will help you look up a city and see the current weather and next five day forcast.
+Weather Dash, this project is designed to display the use of the moment package, pulling data from a web API, storing data to the local storage, while also making local host data a reusable search history. Some technologies used in this project include moment, API's, local storage minipulation, and DOM minipulation
 <img src="assets\images\Weather-API.png">
 
 # Installation
